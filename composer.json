@@ -1,0 +1,25 @@
+{
+    "name": "Test Application",
+    "description": "MVC",
+    "keywords": ["pure-php"],
+    "homepage": "https://google.com",
+    "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.2.0",
+        "tamtamchik/simple-flash": "^2.0"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
