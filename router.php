@@ -7,7 +7,7 @@ class Router
         $url = trim($url);
 
         $explodeUrl = explode('/', $url);
-        $explodeUrl = array_slice($explodeUrl, 2);
+        $explodeUrl = array_slice($explodeUrl, 1);
 
         if (!($explodeUrl[0] ?? false)) {
             $explodeUrl[0] = 'tasks'; # default controller

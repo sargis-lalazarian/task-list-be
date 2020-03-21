@@ -27,7 +27,7 @@ class tasksController extends Controller
 
     function datatable($queryString = null)
     {
-        require(ROOT . 'HELPERS/ssp.class.php');
+        require(ROOT . 'Helpers/ssp.class.php');
 
         $columns = [
             ['db' => 'id', 'dt' => 'id'],
@@ -92,6 +92,13 @@ class tasksController extends Controller
             flash()->error($error);
         }
 
+        $this->set([
+            'task' => [
+                'username' => $username ?? '',
+                'text' => $text ?? '',
+                'email' => $email ?? '',
+            ],
+        ]);
         $this->render("create");
     }
 
